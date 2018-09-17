@@ -1,0 +1,22 @@
+{
+  "name": "action",
+  "version": "1.0.0",
+  "description": "Electus Action Framework",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "truffle test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chaitanyapotti/Action.git"
+  },
+  "author": "chaitanya potti",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chaitanyapotti/Action/issues"
+  },
+  "homepage": "https://github.com/chaitanyapotti/Action#readme"
+}
