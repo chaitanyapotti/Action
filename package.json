@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/chaitanyapotti/Action/issues"
   },
-  "homepage": "https://github.com/chaitanyapotti/Action#readme"
+  "homepage": "https://github.com/chaitanyapotti/Action#readme",
+  "dependencies": {
+    "electusvoting": "^1.0.0"
+  }
 }
