@@ -6,12 +6,12 @@ pragma solidity ^0.4.24;
 
 interface IAction {
 
+    /// @notice executes the action
+    /// @dev executes the action based on the result from `canExecute`
+    function execute() external;
+
     /// @notice checks whether the action can be executed
     /// @dev perform checks and return an appropriate uint corresponding to the executable block
     /// @return the number corresponding to the executable block
     function canExecute() external view returns (uint);
-
-    /// @notice executes the action
-    /// @dev executes the action based on the result from `canExecute`
-    function execute() external;
 }

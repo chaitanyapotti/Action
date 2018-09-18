@@ -18,14 +18,14 @@ contract ActionTest is IAction {
         receiverAccount = _receiverAccount;
     }
 
+    function () public payable {
+        emit EtherReceived(msg.sender, msg.value);
+    }
+
     function execute() external {
         if (canExecute() == 1) {
             receiverAccount.transfer(1 ether);
         }
-    }
-
-    function () payable {
-        emit EtherReceived(msg.sender, msg.value);
     }
 
     function canExecute() public view returns (uint) {
