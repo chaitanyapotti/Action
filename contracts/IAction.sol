@@ -1,4 +1,4 @@
-pragma solidity ^0.4.24;
+pragma solidity ^0.4.25;
 
 /// @title ERC-1xxx Action Standard
 /// @dev See https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1xxx.md

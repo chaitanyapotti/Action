@@ -1,4 +1,4 @@
-pragma solidity ^0.4.24;
+pragma solidity ^0.4.25;
 
 import "../IAction.sol";
 import "electusvoting/contracts/testContracts/TokenProportionalCappedTest.sol";
