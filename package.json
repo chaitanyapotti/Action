@@ -1,6 +1,6 @@
 {
   "name": "electusaction",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Electus Action Framework",
   "main": "truffle-config.js",
   "directories": {
@@ -49,7 +49,7 @@
   },
   "homepage": "https://github.com/chaitanyapotti/Action#readme",
   "dependencies": {
-    "electusvoting": "^1.0.1"
+    "electusvoting": "^1.0.3"
   },
   "devDependencies": {
     "solidity-coverage": "^0.5.11",
