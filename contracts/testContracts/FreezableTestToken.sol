@@ -8,4 +8,4 @@ contract FreezableTestToken is FreezableToken {
         totalSupply_ = 100;
         balances[msg.sender] = totalSupply_;
     }
-} 
+}
