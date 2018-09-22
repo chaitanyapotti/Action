@@ -2,7 +2,7 @@ var ActionTest = artifacts.require("./ActionTest.sol");
 var TokenProportionalCappedTest = artifacts.require("electusvoting/contracts/testContracts/TokenProportionalCappedTest.sol");
 var TokenProportionalUncappedTest = artifacts.require("electusvoting/contracts/testContracts/TokenProportionalUncappedTest.sol");
 var ElectusProtocol = artifacts.require("electusvoting/contracts/protocol/Protocol.sol");
-var TestToken = artifacts.require("electusvoting/contracts/Token/FreezableToken.sol");
+var TestToken = artifacts.require("./FreezableTestToken.sol");
 const increaseTime = require("./utils/increaseTime");
 
 contract("Action Test", function(accounts) {
