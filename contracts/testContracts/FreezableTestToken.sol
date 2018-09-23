@@ -5,7 +5,6 @@ import "electusvoting/contracts/Token/FreezableToken.sol";
 
 contract FreezableTestToken is FreezableToken {
     constructor() public {
-        totalSupply_ = 100;
-        balances[msg.sender] = totalSupply_;
+        _mint(msg.sender, 100);
     }
 }
