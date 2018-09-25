@@ -48,7 +48,6 @@ contract("Action Test", function(accounts) {
       startTime,
       "0"
     );
-    await token1.addAuthorized(pollContract1.address);
     pollContract2 = await TokenProportionalUncappedTest.new(
       [protocol1Contract.address, protocol2Contract.address, protocol3Contract.address],
       ["0x68656c6c6f", "0x776f726c64"],
@@ -59,7 +58,6 @@ contract("Action Test", function(accounts) {
       startTime,
       "0"
     );
-    await token2.addAuthorized(pollContract2.address);
     actionContract = await ActionTest.new([pollContract1.address, pollContract2.address], accounts[0]);
     await actionContract.sendTransaction({
       value: await web3.utils.toWei("1", "ether").toString(),
