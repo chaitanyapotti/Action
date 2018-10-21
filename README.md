@@ -1,4 +1,4 @@
-# Voting
+# Action
 
 <!-- <img align="center" src="./img/colonyNetwork_color.svg" /> -->
 
