@@ -49,7 +49,7 @@
   },
   "homepage": "https://github.com/chaitanyapotti/Action#readme",
   "dependencies": {
-    "electusvoting": "^1.6.2"
+    "electusvoting": "^2.0.0"
   },
   "devDependencies": {
     "solidity-coverage": "^0.5.11",
