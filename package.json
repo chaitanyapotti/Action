@@ -17,16 +17,16 @@
     "prettier": "prettier --write \"**/*.{js,json,css,md}\"",
     "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
     "lint:sol": "solhint contracts/**/*.sol",
-    "lint:js": "eslint test/**/*.js"
+    "lint:js": "eslint --fix test/**/*.js"
   },
   "lint-staged": {
     "*.js": [
-      "eslint --fix test/**/*.js",
+      "npm run lint:js",
       "prettier --write",
       "git add"
     ],
     "*.sol": [
-      "prettier --write **/*.sol",
+      "npm run lint:sol",
       "git add"
     ]
   },
