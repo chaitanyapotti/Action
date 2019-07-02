@@ -16,17 +16,21 @@
     "coverage": "touch allFiredEvents & solidity-coverage",
     "prettier": "prettier --write \"**/*.{js,json,css,md}\"",
     "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
-    "lint:sol": "solhint contracts/**/*.sol",
+    "lint:sol": "prettier --write contracts/**/*.sol",
     "lint:js": "eslint --fix test/**/*.js"
   },
   "lint-staged": {
     "*.js": [
-      "npm run lint:js",
-      "prettier --write",
+      "npm run lint:js --",
+      "prettier --write **/*.js",
       "git add"
     ],
     "*.sol": [
-      "npm run lint:sol",
+      "npm run lint:sol --",
+      "git add"
+    ],
+    "*.{json,css}": [
+      "prettier --write **/*.json",
       "git add"
     ]
   },
@@ -60,7 +64,7 @@
   },
   "homepage": "https://github.com/chaitanyapotti/Action#readme",
   "dependencies": {
-    "electusvoting": "^2.5.3"
+    "electusvoting": "^2.5.4"
   },
   "devDependencies": {
     "eslint": "^6.0.1",
@@ -75,7 +79,9 @@
     "husky": "^3.0.0",
     "lint-staged": "^9.0.0",
     "prettier": "^1.18.2",
+    "prettier-plugin-solidity": "^1.0.0-alpha.26",
     "solhint": "^2.1.0",
+    "solhint-plugin-prettier": "0.0.3",
     "solidity-coverage": "^0.5.11",
     "truffle": "^5.0.25"
   }
