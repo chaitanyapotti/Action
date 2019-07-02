@@ -5,9 +5,7 @@ import "electusvoting/contracts/testContracts/TokenProportionalCappedTest.sol";
 import "electusvoting/contracts/testContracts/TokenProportionalUncappedTest.sol";
 import "electusvoting/contracts/protocol/Protocol.sol";
 
-
 contract ActionTest is IAction {
-
     address[] public protocolAddresses;
     address public receiverAccount;
 
@@ -18,7 +16,7 @@ contract ActionTest is IAction {
         receiverAccount = _receiverAccount;
     }
 
-    function () public payable {
+    function() public payable {
         emit EtherReceived(msg.sender, msg.value);
     }
 
