@@ -66,28 +66,28 @@ contract("Action Test", function(accounts) {
   });
   it("can execute method: returns 1", async () => {
     await increaseTime(10000);
-    await pollContract1.vote("1", { from: accounts[2] });
-    await pollContract2.vote("1", { from: accounts[2] });
+    await pollContract1.vote("1", {from: accounts[2]});
+    await pollContract2.vote("1", {from: accounts[2]});
     const execute = await actionContract.canExecute();
     assert.equal(web3.utils.toDecimal(execute), 1);
   });
   it("can execute method: returns 0", async () => {
     await increaseTime(10000);
-    await pollContract1.vote("1", { from: accounts[2] });
+    await pollContract1.vote("1", {from: accounts[2]});
     const execute = await actionContract.canExecute();
     assert.equal(web3.utils.toDecimal(execute), 0);
   });
   it("execute method: success", async () => {
     await increaseTime(10000);
-    await pollContract1.vote("1", { from: accounts[2] });
-    await pollContract2.vote("1", { from: accounts[2] });
+    await pollContract1.vote("1", {from: accounts[2]});
+    await pollContract2.vote("1", {from: accounts[2]});
     await actionContract.execute();
     const balance = await web3.eth.getBalance(actionContract.address);
     assert.equal(web3.utils.toDecimal(balance), 0);
   });
   it("execute method: failure", async () => {
     await increaseTime(10000);
-    await pollContract1.vote("1", { from: accounts[2] });
+    await pollContract1.vote("1", {from: accounts[2]});
     await actionContract.execute();
     const balance = await web3.eth.getBalance(actionContract.address);
     assert.equal(web3.utils.fromWei(balance.toString(), "ether"), 1);
