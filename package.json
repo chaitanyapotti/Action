@@ -1,6 +1,6 @@
 {
   "name": "electusaction",
-  "version": "2.5.5",
+  "version": "2.5.6",
   "description": "Electus Action Framework",
   "main": "truffle-config.js",
   "directories": {
